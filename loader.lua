@@ -73,6 +73,20 @@ section4:addButton("Sheds Bypasser V3", function()
 loadstring(game:HttpGet("https://the-shed.xyz/roblox/scripts/ChatBypass", true))()
 end)
 
+local page = venyx:addPage("Local Player", 5012544693)
+local section1 = page:addSection("Local Player Atributes")
+section1:addSlider("WalkSpeed (may be detected by anti-cheat)", 16, 0, 300, function(speed)
+game:GetService("Players").LocalPlayer.Character.Humanoid.WalkSpeed = (speed)
+end)
+section1:addButton("Reset WalkSpeed to Default", function()
+game:GetService("Players").LocalPlayer.Character.Humanoid.WalkSpeed = 16
+end)
+section1:addSlider("JumpPower (may be detected by anti-cheat)", 50, 0, 1000, function(jump)
+game:GetService("Players").LocalPlayer.Character.Humanoid.JumpPower = (jump)
+end)
+section1:addButton("Reset JumpPower to Default", function()
+game:GetService("Players").LocalPlayer.Character.Humanoid.JumpPower = 50
+end)
 local page = venyx:addPage("Credits", 5012544693)
 
 local section1 = page:addSection("Credits")
