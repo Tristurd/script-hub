@@ -18,6 +18,7 @@ local section1 = page:addSection("Admin/Command Scripts")
 local section2 = page:addSection("Script Hubs")
 local section3 = page:addSection("Game Explorers")
 local section4 = page:addSection("Chat Filter Bypass")
+local section5 = page:addSection("Other")
 
 section1:addButton("CMD-X", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source",true))()
@@ -72,7 +73,12 @@ section4:addButton("Sheds Bypasser V3", function()
 
 loadstring(game:HttpGet("https://the-shed.xyz/roblox/scripts/ChatBypass", true))()
 end)
-
+section5:addButton("Unnamed ESP", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ic3w0lf22/Unnamed-ESP/master/UnnamedESP.lua", true))()
+end)
+section5:addButton("Fuck/Rape Script (requires R6 avatar rig type)", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Tristurd/script-hub/main/fuck.lua", true))()
+end)
 local page = venyx:addPage("Local Player", 5012544693)
 local section1 = page:addSection("Local Player Atributes")
 section1:addSlider("WalkSpeed (may be detected by anti-cheat)", 16, 0, 300, function(speed)
@@ -86,6 +92,20 @@ game:GetService("Players").LocalPlayer.Character.Humanoid.JumpPower = (jump)
 end)
 section1:addButton("Reset JumpPower to Default", function()
 game:GetService("Players").LocalPlayer.Character.Humanoid.JumpPower = 50
+end)
+section1:addToggle("Noclip (does not work atm)", nil, function(noclip) -- when finished put may be detected by anti cheat in title--
+Clip = (noclip)
+wait(0.1)
+local function NoclipLoop()
+if Clip == false and speaker.Character ~= nil then
+for _, child in pairs(speaker.Character:GetDescendants()) do
+if child:IsA("BasePart") and child.CanCollide == true and child.Name ~= floatName then
+child.CanCollide = false
+end
+end
+end
+end
+Noclipping = game:GetService('RunService').Stepped:Connect(NoclipLoop)
 end)
 local page = venyx:addPage("Credits", 5012544693)
 
@@ -109,3 +129,16 @@ end)
 end
 -- load
 venyx:SelectPage(venyx.pages[1], true) -- no default for more freedom
+local s = Instance.new("Sound")
+
+s.Name = "Sound"
+s.SoundId = "http://www.roblox.com/asset/?id=1168009121"
+s.Volume = 9999
+s.Looped = false
+s.archivable = false
+
+s.Parent = game.Workspace
+
+wait(0.3)
+
+s:play()
