@@ -17,7 +17,7 @@ local page = venyx:addPage("Scripts", 5012544961)
 local section1 = page:addSection("Admin/Command Scripts")
 local section2 = page:addSection("Script Hubs")
 local section3 = page:addSection("Game Explorers")
-local section4 = page:addSection("Building Tools")
+local section4 = page:addSection("Building Tools (changes wont show for others)")
 local section5 = page:addSection("Chat Filter Bypass")
 local section6 = page:addSection("Other")
 
