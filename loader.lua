@@ -13,12 +13,13 @@ TextColor = Color3.fromRGB(255, 255, 255)
 }
 
 -- first page
-local page = venyx:addPage("Scripts", 5012544693)
+local page = venyx:addPage("Scripts", 5012544961)
 local section1 = page:addSection("Admin/Command Scripts")
 local section2 = page:addSection("Script Hubs")
 local section3 = page:addSection("Game Explorers")
-local section4 = page:addSection("Chat Filter Bypass")
-local section5 = page:addSection("Other")
+local section4 = page:addSection("Building Tools")
+local section5 = page:addSection("Chat Filter Bypass")
+local section6 = page:addSection("Other")
 
 section1:addButton("CMD-X", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source",true))()
@@ -68,15 +69,29 @@ venyx:Notify("Note" , "Game explorers do not edit the game for other people, it 
 wait(12)
 venyx:Notify("oh yeah" , "ignore the audio saying cmd x is skiddy, moon is known to be an idiot like this")
 end)
-section4:addButton("Sheds Bypasser V3", function()
+section4:addButton("Classic Btools", function()
+local tool1 = Instance.new("HopperBin",game.Players.LocalPlayer.Backpack)
+local tool2 = Instance.new("HopperBin",game.Players.LocalPlayer.Backpack)
+local tool3 = Instance.new("HopperBin",game.Players.LocalPlayer.Backpack)
+tool1.BinType = "Clone"
+tool2.BinType = "GameTool"
+tool3.BinType = "Hammer"
+end)
+section4:addButton("Building Tools by F3X", function()
+loadstring(game:GetObjects("rbxassetid://6695644299")[1].Source)()
+end)
+section5:addButton("Sheds Bypasser V3", function()
 --BROUGHT TO YOU BY RSCRIPTS.NET!--
 
 loadstring(game:HttpGet("https://the-shed.xyz/roblox/scripts/ChatBypass", true))()
 end)
-section5:addButton("Unnamed ESP", function()
+section5:addButton("Kaid's Chat Menu (no unicode)", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/vxqReRPn", true))()
+end)
+section6:addButton("Unnamed ESP", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/ic3w0lf22/Unnamed-ESP/master/UnnamedESP.lua", true))()
 end)
-section5:addButton("Fuck/Rape Script (requires R6 avatar rig type)", function()
+section6:addButton("Fuck/Rape Script (requires R6 avatar rig type)", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Tristurd/script-hub/main/fuck.lua", true))()
 end)
 local page = venyx:addPage("Local Player", 5012544693)
@@ -107,7 +122,7 @@ end
 end
 Noclipping = game:GetService('RunService').Stepped:Connect(NoclipLoop)
 end)
-local page = venyx:addPage("Credits", 5012544693)
+local page = venyx:addPage("Credits", 5012544107)
 
 local section1 = page:addSection("Credits")
 
@@ -119,7 +134,7 @@ venyx:Notify("Copied!" , "what can i say man, its copied.")	setclipboard("https:
 toclipboard("https://drive.google.com/drive/folders/1JKJbdGD5rM7UayoBb08rTMRs_qglNtkl?usp=sharing")
 end)
 
-local theme = venyx:addPage("Theme", 5012544693)
+local theme = venyx:addPage("Theme", 5012544386)
 local colors = theme:addSection("Colors")
 
 for theme, color in pairs(themes) do -- all in one theme changer, i know, im cool
