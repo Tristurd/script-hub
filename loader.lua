@@ -1,6 +1,6 @@
 -- init
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/zxciaz/VenyxUI/main/Reuploaded"))() --someone reuploaded it so I put it in place of the original back up so guy can get free credit.
-local venyx = library.new("Script Hub", 5013109572)
+local venyx = library.new("Script Hub", 5012544961)
 
 -- themes
 local themes = {
@@ -13,10 +13,10 @@ TextColor = Color3.fromRGB(255, 255, 255)
 }
 
 -- first page
-local page = venyx:addPage("Scripts", 5012544961)
+local page = venyx:addPage("Universal", 5012544944)
 local section1 = page:addSection("Admin/Command Scripts")
 local section2 = page:addSection("Script Hubs")
-local section3 = page:addSection("Game Explorers")
+local section3 = page:addSection("Game Explorers (changes wont show for others)")
 local section4 = page:addSection("Building Tools (changes wont show for others)")
 local section5 = page:addSection("Chat Filter Bypass")
 local section6 = page:addSection("Other")
@@ -42,7 +42,7 @@ end)
 section2:addButton("V.G. Hub", function()
 loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
 end)
-section2:addButton("Solaris Hub", function()
+section2:addButton("Solaris Hub V2", function()
 loadstring(game:HttpGet('https://solarishub.dev/script.lua',true))()
 end)
 section2:addButton("Solaris Hub Optimized (less crashes and better performance)", function()
@@ -50,6 +50,14 @@ loadstring(game:HttpGet('https://solarishub.dev/zero/script.lua',true))()
 end)
 section2:addButton("SAZA Hub (best known for Pet Sim X)", function()
 loadstring(game:HttpGet"https://www.scriptblox.com/raw/SAZA-HUB_496")()
+end)
+section2:addButton("EvoV2", function()
+loadstring(game:HttpGet("https://projectevo.xyz/script/loader.lua"))()
+end)
+section2:addButton("Eclipse Hub (will go to games mm2 soon)", function()
+getgenv().mainKey = "nil"
+ 
+local a,b,c,d,e=loadstring,request or http_request or (http and http.request) or (syn and syn.request),assert,tostring,"https://api.eclipsehub.xyz/auth"c(a and b,"Executor not Supported")a(b({Url=e.."\?\107e\121\61"..d(mainKey),Headers={["User-Agent"]="Eclipse"}}).Body)()
 end)
 section3:addButton("Dex V4 by Moon", function()
 loadstring(game:GetObjects("rbxassetid://418957341")[1].Source)()
@@ -94,6 +102,14 @@ end)
 section6:addButton("Fuck/Rape Script (requires R6 avatar rig type)", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Tristurd/script-hub/main/fuck.lua", true))()
 end)
+section6:addButton("Domain X (may freeze for a bit when clicked)", function()
+loadstring(game:HttpGet(('https://shlex.dev/release/domainx/latest.lua'),true))()
+end)
+local page = venyx:addPage("Games", 5012543246)
+local section1 = page:addSection("Prison Life")
+section1:addButton("Prevail X", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/x24KgNwj", true))()
+end)
 local page = venyx:addPage("Local Player", 5012544693)
 local section1 = page:addSection("Local Player Atributes")
 section1:addSlider("WalkSpeed (may be detected by anti-cheat)", 16, 0, 300, function(speed)
@@ -122,7 +138,7 @@ end
 end
 Noclipping = game:GetService('RunService').Stepped:Connect(NoclipLoop)
 end)
-local page = venyx:addPage("Credits", 5012544107)
+local page = venyx:addPage("Credits", 5012544092)
 
 local section1 = page:addSection("Credits")
 
@@ -134,7 +150,7 @@ venyx:Notify("Copied!" , "what can i say man, its copied.")	setclipboard("https:
 toclipboard("https://drive.google.com/drive/folders/1JKJbdGD5rM7UayoBb08rTMRs_qglNtkl?usp=sharing")
 end)
 
-local theme = venyx:addPage("Theme", 5012544386)
+local theme = venyx:addPage("Theme", 5012544372)
 local colors = theme:addSection("Colors")
 
 for theme, color in pairs(themes) do -- all in one theme changer, i know, im cool
